@@ -1,5 +1,6 @@
 set nocompatible
 
+syn on
 set expandtab
 set nobackup
 set noswapfile
