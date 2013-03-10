@@ -1,0 +1,5 @@
+event(OnInvite,printToActive)
+{
+	echo -w=$active -i=$msgtype(Invite) <$link($0, nick)> invites you to $3;
+}
+

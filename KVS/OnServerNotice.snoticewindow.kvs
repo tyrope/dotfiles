@@ -1,0 +1,8 @@
+event(OnServerNotice,snoticewindow)
+{
+	if (!%SNotice{$context} || !$window.exists(%SNotice{$context})) {
+		%SNotice{$context} = $window.open("m", "Server Notices", $context, 110);
+	}
+	echo -w=%SNotice{$context} -i=$msgtype(ServerNotice) $1;
+}
+
