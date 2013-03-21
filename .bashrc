@@ -11,6 +11,7 @@ alias cd~="cd ~"
 alias cd..="cd .."
 alias ..="cd .."
 alias ~="cd ~"
+alias cls="clear"
 
 function searchfile() {
     grep -R "$1" .
