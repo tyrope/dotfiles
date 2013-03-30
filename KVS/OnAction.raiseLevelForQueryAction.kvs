@@ -1,6 +1,0 @@
-event(OnAction, raiseLevelForQueryAction) {
-    if($3 == $my.nick){
-	    window.highlight 4;
-    }
-}
-
