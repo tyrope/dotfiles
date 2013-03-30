@@ -1,0 +1,10 @@
+if($3 == $my.nick){
+	if($window.highlightLevel < 4){
+		window.highlight 4;
+	}
+}else{
+	if($window.highlightLevel < 3){
+		window.highlight 3;
+	}
+}
+
