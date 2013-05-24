@@ -4,9 +4,10 @@ syn on
 
 set expandtab
 set ff=unix
+set hlsearch
 set keymodel-=stopsel
 set list
-set listchars=trail:·
+set listchars=trail:ï¿½
 set nobackup
 set nocompatible
 set noswapfile
