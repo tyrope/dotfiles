@@ -13,6 +13,7 @@ alias ..="cd .."
 alias ~="cd ~"
 alias cls="clear"
 alias gitlog="git log --author=@tyrope.nl --format=\"%ai %h %s\"; #This shows all commits in the format of \"date hash commitmessage\""
+alias :q=exit
 
 function searchfile() {
     grep -R "$1" .
