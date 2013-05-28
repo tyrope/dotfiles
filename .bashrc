@@ -19,4 +19,8 @@ function searchfile() {
     grep -R "$1" .
 }
 
+function gitpush() {
+    git add .; git commit -m "$@"; git push
+}
+
 export LANG=en_GB.UTF-8
