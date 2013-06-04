@@ -7,7 +7,7 @@ set ff=unix
 set hlsearch
 set keymodel-=stopsel
 set list
-set listchars=trail:ï¿½
+set listchars=trail:·
 set nobackup
 set nocompatible
 set noswapfile
