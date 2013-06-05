@@ -4,6 +4,7 @@ syn on
 
 set expandtab
 set ff=unix
+set fileencodings=utf-8
 set hlsearch
 set keymodel-=stopsel
 set list
@@ -23,3 +24,4 @@ command! W w
 command! Q q
 command! Wq wq
 command! WQ wq
+
