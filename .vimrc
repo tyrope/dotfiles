@@ -2,6 +2,7 @@ match ErrorMsg /DEBUG/
 
 syn on
 
+set backspace=2
 set expandtab
 set ff=unix
 set fileencodings=utf-8
