@@ -1,0 +1,18 @@
+alias(board)
+{
+	if(!$isset($0)){
+		echo Usage: /board message;
+	}else{
+		msg #board ATTN Board members: $0-;
+		query Willie "Willie, tell Jason $0-";
+		query Willie "Willie, tell Emmi $0-";
+		query Willie "Willie, tell Embolalia $0-";
+		query Willie "Willie, tell irishlluv $0-";
+		query Willie "Willie, tell ScathachWarrior $0-";
+		query Willie "Willie, tell jash $0-";
+		query Willie "Willie, tell Elly306 $0-";
+		query Willie "Willie, tell Wannabe1987 $0-";
+	}
+}
+
+

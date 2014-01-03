@@ -23,4 +23,9 @@ function gitpush() {
     git add .; git commit -m "$1"; git push
 }
 
+function gitchmod() {
+    git update-index --chmod=+x $1
+}
+
 export LANG=en_GB.UTF-8
+
