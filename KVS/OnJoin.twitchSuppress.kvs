@@ -1,0 +1,7 @@
+event(OnJoin,twitchSuppress)
+{
+	if($context.networkName() == "Twitch TV"){
+		halt;
+	}
+}
+
