@@ -20,7 +20,7 @@ function searchfile() {
 }
 
 function gitpush() {
-    git add .; git commit -m "$1"; git pull --rebase; git push
+    git add .; git commit -m "$1"; git pull --rebase; git push --recurse-submodules=on-demand
 }
 
 function gitchmod() {
