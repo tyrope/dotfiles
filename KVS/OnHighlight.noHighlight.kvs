@@ -1,21 +1,10 @@
 event(OnHighlight,noHighlight)
 {
-	if ($0 == "GitHub" || $0 == "Elecbot" || $0 == "*buffextras" || $0 == "Dealer"){
-		echoprivmsg -n $0 $1 $2 $3;
-		halt;
-	}
-	if ($0 == "NerdAnnounce" || $0 == "Lemon" || $0 == "TwitchBridge" || $0 == "Idle"){
-		echoprivmsg -n $0 $1 $2 $3;
-		halt;
-	}
-	if ($0 == "MafBot" || $0 == "MafWoa" || $0 == "MafTy" || $0 == "HelpBot"){
-		echoprivmsg -n $0 $1 $2 $3;
-		halt;
-	}
-	
-	if ($0 == "GH-boomer" || $0 == "FTB_Magic_Server"){
-		echoprivmsg -n $0 $1 $2 $3;
-		halt;
-	}
+    if ($0 == "GitHub" || $0 == "Elecbot" || $0 == "*buffextras" || \
+        $0 == "NerdAnnounce" || $0 == "Lemon" || $0 == "Idle" || \
+        $0 == "GH-boomer" || $0 == "jtv"){
+        echoprivmsg -n $0 $1 $2 $3;
+        halt;
+    }
 }
 

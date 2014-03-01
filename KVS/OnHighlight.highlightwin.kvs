@@ -1,28 +1,23 @@
 event(OnHighlight,highlightwin)
 {
-	if ($str.contains($0,".net") || $0 == "NerdAnnounce" || $0 == "StatServ" || $0 == "Lemon"){
-		return;
-	}
-	if ($0 == "Willie" || $0 == "Elecbot" || $0 == "elad-testbot" || $0 == "Dealer"){
-		return;
-	}
-	if ($0 == "Boomer" || $0 == "Idle" || $0 == "GitHub" || $0 == "GH-boomer" || $0 == "HelpBot"){
-		return;
-	}
-	if ($0 == "FTB_Magic_Server" || $0 == "MafBot" || $0 == "MafWoa" || $0 == "MafTy"){
-		return;
-	}
-	if (!%Highlight{$context} || !$window.exists(%Highlight{$context})) {
-		%Highlight{$context} = $window.open("m", "Highlights", $context, 110);
-	}
-	if (!$6) {
-		if($window.type == "channel") {
-			echo -w=%Highlight{$context} -i=$msgtype(privatemessage) [$target]<$link($0, nick)> $3;
-		}
-	} else {
-		if($window.type == "channel") {
-			echo -w=%Highlight{$context} -i=$msgtype(action) [$target]$link($0, nick) $3;
-		}
-	}
+    if ($str.contains($0,".net") || $0 == "NerdAnnounce" || $0 == "Lemon" || \
+        $0 == "Boomer" || $0 == "GitHub" || $0 == "*buffextras" || \
+        $0 == "Lime" || $0 == "Elecbot" || $0 == "elad-testbot" || \
+        $0 == "Willie" || $0 == "HelpBot" || $str.contains($0,"Shocky") \
+        ){
+        return;
+    }
+    if (!%Highlight{$context} || !$window.exists(%Highlight{$context})) {
+        %Highlight{$context} = $window.open("m", "Highlights", $context, 110);
+    }
+    if (!$6) {
+        if($window.type == "channel") {
+            echo -w=%Highlight{$context} -i=$msgtype(privatemessage) [$target]<$link($0, nick)> $3;
+        }
+    } else {
+        if($window.type == "channel") {
+            echo -w=%Highlight{$context} -i=$msgtype(action) [$target]$link($0, nick) $3;
+        }
+    }
 }
 
