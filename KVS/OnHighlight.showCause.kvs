@@ -1,0 +1,5 @@
+event(OnHighlight,showCause)
+{
+	echo Highlight cause: $4;
+}
+
