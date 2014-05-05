@@ -38,8 +38,6 @@ counter = 1
 
 #Helper method.
 def gitcmd(cmd):
-        # Print command
-        print cmd
         # Open up a proccess
         p = subprocess.Popen(cmd, stdout = subprocess.PIPE,
             stderr = subprocess.PIPE)
@@ -83,5 +81,5 @@ while True:
             print "Push complete. Starting new 15 minutes timer."
         counter = 14
 
-    sleep(10) #sleep(60)
+    sleep(60)
 
