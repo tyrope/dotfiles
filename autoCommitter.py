@@ -63,7 +63,7 @@ while True:
     if counter > 0:
         # Wait...
         if not conf['silent']:
-            print "Pushing to remote in %s minutes." % (counter,)
+            print "Pushing to remote in %s minutes." % (counter+1,)
     else:
         # Add
         gitcmd(gitadd)
@@ -71,7 +71,7 @@ while True:
         # Commit
         if not conf['silent']:
             print "Committing"
-        gitcmd(gitcommit + [str(datetime.now())])
+        gitcmd(gitcommit + ['AutoCommit: '+str(datetime.now())])
 
         # Push
         if conf['push']:
