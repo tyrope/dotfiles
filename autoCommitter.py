@@ -32,7 +32,7 @@ import subprocess
 
 #Prepare commands & Counter value
 gitadd = ['git', 'add', '.']
-gitcommit = ['git', 'commit','-a','-m']
+gitcommit = ['git', 'commit', '-a', '--allow-empty', '-m']
 gitpush = ['git', 'push', conf['remote'], conf['branch']]
 counter = 1
 
