@@ -26,6 +26,7 @@ conf['branch'] = 'master' # Remote branch you want to push to.
 #- End of Configuration -
 #------------------------
 
+from __future__ import print_function
 from time import sleep
 from datetime import datetime
 import subprocess
@@ -47,38 +48,38 @@ def gitcmd(cmd):
 
         # Thank you.
         if err != '' and conf['print_stderr']:
-            print err
+            print(err)
         if conf['print_stdout']:
-            print out
+            print(out)
         return
 
 # Main Cycle start
 if not conf['silent']:
-    print "Starting the auto committer in 3, 2, 1, GO!"
+    print("Starting the auto committer in 3, 2, 1, GO!")
 
 while True:
     counter -= 1
     if counter > 0:
         # Wait...
         if not conf['silent']:
-            print "Pushing to remote in %s minutes." % (counter+1,)
+            print("Pushing to remote in %s minutes." % (counter+1,))
     else:
         # Add
         gitcmd(gitadd)
 
         # Commit
         if not conf['silent']:
-            print "Committing"
+            print("Committing")
         gitcmd(gitcommit + ['AutoCommit: '+str(datetime.now())])
 
         # Push
         if conf['push']:
             if not conf['silent']:
-                print "Pushing."
+                print("Pushing.")
             gitcmd(gitpush)
 
         if not conf['silent']:
-            print "Push complete. Starting new 15 minutes timer."
+            print("Push complete. Starting new 15 minutes timer.")
         counter = 14
 
     sleep(60)
