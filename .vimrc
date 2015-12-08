@@ -1,8 +1,9 @@
-match ErrorMsg /DEBUG/
+match ErrorMsg /DEBUG\|FIXME\|TODO/
 
 syn on
 
 set backspace=2
+set colorcolumn=80
 set expandtab
 set ff=unix
 set fileencodings=utf-8
