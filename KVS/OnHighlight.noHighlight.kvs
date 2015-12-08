@@ -1,8 +1,9 @@
 event(OnHighlight,noHighlight)
 {
     if ($0 == "GitHub" || $0 == "Elecbot" || $0 == "*buffextras" || \
-        $0 == "NerdAnnounce" || $0 == "Lemon" || $0 == "Idle" || \
-        $0 == "GH-boomer" || $0 == "jtv"){
+	    $0 == "NerdAnnounce" || $0 == "Lemon" || $0 == "Lime" || \
+    	$0 == "jtv" || $0 == "nightbot" || $0 == "lionroarbot" || \
+	    $0 == "seriouslybot"){
         echoprivmsg -n $0 $1 $2 $3;
         halt;
     }

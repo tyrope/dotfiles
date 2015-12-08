@@ -1,11 +1,11 @@
 event(OnHighlight,highlightwin)
 {
     if ($str.contains($0,".net") || $0 == "NerdAnnounce" || $0 == "Lemon" || \
-        $0 == "Boomer" || $0 == "GitHub" || $0 == "*buffextras" || \
-        $0 == "Lime" || $0 == "Elecbot" || $0 == "elad-testbot" || \
-        $0 == "Willie" || $0 == "HelpBot" || $str.contains($0,"Shocky") \
-        ){
-        return;
+    	$0 == "Boomer" || $0 == "GitHub" || $0 == "*buffextras" || \
+	    $0 == "Lime" || $0 == "Elecbot" || $0 == "Willie" || \
+	    $0 == "HelpBot" || $str.contains($0,"Shocky") || \
+	    $0 == "Nightbot" || $0 == "lionroarbot" || $0 == "seriouslybot"){
+    	return;
     }
     if (!%Highlight{$context} || !$window.exists(%Highlight{$context})) {
         %Highlight{$context} = $window.open("m", "Highlights", $context, 110);
