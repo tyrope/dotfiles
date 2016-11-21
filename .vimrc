@@ -1,4 +1,7 @@
-match ErrorMsg /DEBUG\|FIXME\|TODO/
+augroup match
+    autocmd!
+    autocmd FileType * match ErrorMsg /DEBUG\|FIXME\|TODO/
+augroup END
 
 syn on
 
