@@ -10,10 +10,11 @@ set colorcolumn=80
 set expandtab
 set ff=unix
 set fileencodings=utf-8
+set guifont=Consolas
 set hlsearch
 set keymodel-=stopsel
 set list
-set listchars=trail:·
+set listchars=trail:?
 set nobackup
 set nocompatible
 set noswapfile
@@ -29,4 +30,3 @@ command! W w
 command! Q q
 command! Wq wq
 command! WQ wq
-
